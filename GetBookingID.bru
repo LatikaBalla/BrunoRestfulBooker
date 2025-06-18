@@ -1,0 +1,19 @@
+meta {
+  name: GetBookingID
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://restful-booker.herokuapp.com/booking/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 2
+}
+
+headers {
+  accept: application/json
+}

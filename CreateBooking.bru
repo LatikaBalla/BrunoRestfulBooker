@@ -1,0 +1,30 @@
+meta {
+  name: CreateBooking
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://restful-booker.herokuapp.com/booking
+  body: json
+  auth: inherit
+}
+
+headers {
+  accept: application/json
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "firstname" : "Jim",
+      "lastname" : "Brown",
+      "totalprice" : 111,
+      "depositpaid" : true,
+      "bookingdates" : {
+          "checkin" : "2018-01-01",
+          "checkout" : "2019-01-01"
+      },
+      "additionalneeds" : "Breakfast"
+  }
+}

@@ -1,0 +1,28 @@
+meta {
+  name: PartialUpdateBooking
+  type: http
+  seq: 6
+}
+
+patch {
+  url: https://restful-booker.herokuapp.com/booking/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: 28
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+  Cookie: token=80137a95c03489a
+}
+
+body:json {
+  {
+      "firstname" : "James",
+      "lastname" : "Brown"
+  }
+}
