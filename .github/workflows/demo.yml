@@ -1,0 +1,23 @@
+name: Bruno API Test Demo
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  run-bruno-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Bruno CLI
+        run: |
+          npm install -g @usebruno/cli
+
+      - name: Run Bruno CLI RestFulBooker
+        run: |
+          bru run
